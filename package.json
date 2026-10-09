@@ -1,0 +1,26 @@
+{
+  "name": "uzera-team-invitations-tests",
+  "version": "1.0.0",
+  "description": "BDD automated tests for Uzera plan-based team invitations feature",
+  "scripts": {
+    "test": "cucumber-js --config cucumber.config.js",
+    "test:free": "cucumber-js --config cucumber.config.js --tags \"@free\"",
+    "test:premium": "cucumber-js --config cucumber.config.js --tags \"@premium\"",
+    "test:edge": "cucumber-js --config cucumber.config.js --tags \"@edge\"",
+    "test:report": "cucumber-js --config cucumber.config.js --format html:reports/cucumber-report.html",
+    "mock:start": "node mock-server/server.js",
+    "lint": "eslint . --ext .js"
+  },
+  "dependencies": {
+    "express": "4.18.2"
+  },
+  "devDependencies": {
+    "@cucumber/cucumber": "10.3.2",
+    "@playwright/test": "1.44.0",
+    "playwright": "1.44.0",
+    "axios": "1.6.8",
+    "chai": "4.4.1",
+    "dotenv": "16.4.5",
+    "uuid": "9.0.1"
+  }
+}
